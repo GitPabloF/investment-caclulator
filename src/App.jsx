@@ -17,8 +17,8 @@ function App() {
         const newInputValues = { ...inputValues };
         newInputValues[index] = parseFloat(value);
         setInputValue(newInputValues);
-        console.log(inputValues);
     }
+    const isInputValid = inputValues.duration >= 1;
 
     return (
         <>
@@ -27,7 +27,10 @@ function App() {
                 inputValues={inputValues}
                 handleInputChange={handleInputChange}
             />
-            <Result inputValues={inputValues} />
+            {!isInputValid && (
+                <p className="center">The duration must be 1 year or more</p>
+            )}
+            {isInputValid && <Result inputValues={inputValues} />}
         </>
     );
 }

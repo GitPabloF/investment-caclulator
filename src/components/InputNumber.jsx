@@ -23,6 +23,7 @@ export default function InputNumber({
                     id={inputNameWithoutSpace}
                     value={inputValue}
                     onChange={handleChange}
+                    required
                 />
             </p>
         </>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function UserImput({ inputValues, handleInputChange }) {
     return (
-        <form action="" id="user-input">
+        <section id="user-input">
             <div className="input-group">
                 <InputNumber
                     inputName={'inital investment'}
@@ -38,6 +38,6 @@ export default function UserImput({ inputValues, handleInputChange }) {
                     }
                 />
             </div>
-        </form>
+        </section>
     );
 }
